@@ -1,3 +1,7 @@
-angular.module('swd').controller('masterController', ['$scope', '$timeout', function($scope, $timeout) {
-
+angular.module('swd').controller('masterController', ['$scope', '$timeout', 'cardsService', function($scope, $timeout, cardsService) {
+    $scope.cards = [];
+    
+    cardsService.getCards().then(function(cards) {
+        $scope.cards = cards.data;
+    });
 }]);
