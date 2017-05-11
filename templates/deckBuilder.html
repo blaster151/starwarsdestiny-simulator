@@ -1,0 +1,11 @@
+<div>
+    DECK BUILDER
+
+    <div>Cards in deck: {{deck.cards.length}}</div>
+    <div ng-repeat="card in deck.cards track by $index">{{card.name}}</div>
+    <div>Valid: {{deck.isValid}}</div>
+    <div>Is Full: {{deck.isFull}}</div>
+    <div>Character count: {{deck.characterPoints}}</div>
+
+    <card-browser cards="cards" on-selected="onCardSelected({ card: card })"></card-browser>
+</div>

@@ -1,0 +1,8 @@
+<div>
+    CARD BROWSER
+
+    <div ng-repeat="card in cards | limitTo:10" ng-click="onSelected({card:card})">
+        <div>{{card.name}}</div>
+        <img class="cardImage" ng-src="{{card.imagesrc}}"></img>
+    </div>
+</div>

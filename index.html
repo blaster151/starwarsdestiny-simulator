@@ -4,8 +4,12 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
 
         <script type="text/javascript" src="/scripts/app.js"></script>
+        <script type="text/javascript" src="/scripts/models/deck.js"></script>
         <script type="text/javascript" src="/scripts/services/cardsService.js"></script>
         <script type="text/javascript" src="/scripts/controllers/masterController.js"></script>
+        <script type="text/javascript" src="/scripts/directives/cardBrowser.js"></script>
+        <script type="text/javascript" src="/scripts/directives/deckBuilder.js"></script>
+        <script type="text/javascript" src="/scripts/directives/deckBuilderController.js"></script>
 
         <link href="/styles/styles.css" type="text/css" rel="stylesheet" />
 
@@ -14,11 +18,8 @@
     </head>
 
     <body ng-app="swd" ng-controller="masterController">
-        Welcome to Star Wars Destiny: Simulator ({{cards.length}}) cards known; first ten shown
-
-        <div ng-repeat="card in cards | limitTo:10">
-            <div>{{card.name}}</div>
-            <img class="cardImage" ng-src="{{card.imagesrc}}"></img>
-        </div>
+        Welcome to Star Wars Destiny: Simulator ({{cards.length}}) cards known
+       
+        <deck-builder deck="deck" cards="cards"></deck-builder>
     </body>
 </html>
