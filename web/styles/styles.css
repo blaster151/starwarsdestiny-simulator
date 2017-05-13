@@ -5,3 +5,43 @@ body {
 .cardImage {
     max-width: 100px;
 }
+
+.isSelectableTargetCard, .isSelectableTargetDie {
+    border: 1px solid darkred;
+    box-sizing: border-box;
+}
+
+.action {
+    border: 2px solid orange;
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 2px 5px 2px 5px;
+    background: orange;
+    color: white;
+    cursor: pointer;
+}
+
+.action:hover {
+    border: 2px solid orangered;
+    border-radius: 12px;
+    background: white;
+    box-sizing: border-box;
+    background: orangered;
+    color: white;
+}
+
+.upgrades {
+    position: relative;
+    bottom: -10px;
+    left: 20%;
+}
+
+.upgrade {
+    position: relative;
+}
+
+.upgrade img {
+    max-width: 40px;
+}

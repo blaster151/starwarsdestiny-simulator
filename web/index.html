@@ -5,21 +5,38 @@
 
         <script type="text/javascript" src="/scripts/app.js"></script>
         <script type="text/javascript" src="/scripts/models/deck.js"></script>
+        <script type="text/javascript" src="/scripts/models/match.js"></script>
+        <script type="text/javascript" src="/scripts/models/player.js"></script>
+        <script type="text/javascript" src="/scripts/models/turn.js"></script>
+        <script type="text/javascript" src="/scripts/models/card.js"></script>
+        <script type="text/javascript" src="/scripts/models/die.js"></script>
+        <script type="text/javascript" src="/scripts/models/matchCoordinator.js"></script>
         <script type="text/javascript" src="/scripts/services/cardsService.js"></script>
+        <script type="text/javascript" src="/scripts/services/selectorService.js"></script>
         <script type="text/javascript" src="/scripts/controllers/masterController.js"></script>
         <script type="text/javascript" src="/scripts/directives/cardBrowser.js"></script>
+        <script type="text/javascript" src="/scripts/directives/cardsDisplay.js"></script>
         <script type="text/javascript" src="/scripts/directives/deckBuilder.js"></script>
         <script type="text/javascript" src="/scripts/directives/deckBuilderController.js"></script>
+        <script type="text/javascript" src="/scripts/directives/match.js"></script>
+        <script type="text/javascript" src="/scripts/directives/card.js"></script>
+        <script type="text/javascript" src="/scripts/directives/dicePool.js"></script>
+        <script type="text/javascript" src="/scripts/directives/actionMenu.js"></script>
+        <script type="text/javascript" src="/scripts/directives/playerView.js"></script>
+        <script type="text/javascript" src="/scripts/directives/die.js"></script>
 
         <link href="/styles/styles.css" type="text/css" rel="stylesheet" />
-
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" type="text/css" rel="stylesheet" />
+        
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
 
-    <body ng-app="swd" ng-controller="masterController">
-        Welcome to Star Wars Destiny: Simulator ({{cards.length}}) cards known
-       
-        <deck-builder deck="deck" cards="cards"></deck-builder>
-    </body>
+<body ng-app="swd" ng-controller="masterController">
+    <div class="container">
+        <div class="row">
+            <match match="match"></match>
+        </div>
+    </div>
+</body>
 </html>

@@ -1,0 +1,56 @@
+<div>
+    <div class="row">
+        <div class="col-md-8">
+            <h2>
+                {{player.name}}
+                <span style="font-size: 18px; font-weight: bold; color: orangered" ng-show="player.isTurn">(YOUR TURN)</span>
+            </h2>
+        </div>
+        <div class="col-md-4">
+            <div ng-show="player.deck.battlefield == match.battlefield">
+                <card card="match.battlefield"></card>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>
+                <div style="float: left">
+                    Resources <span class="badge">{{player.resources}}</span>
+                </div>
+
+                <div style="float: left; max-width: 30px" ng-repeat="i in range(player.resources)">
+                    <img style="max-width: 30px" src="/images/resource.jpg" />
+                </div>
+            </h4>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Characters</h4>
+            <cards-display cards="player.deck.getCharacters()"></cards-display>
+        </div>
+
+        <div class="col-md-6">
+            <h4>Dice Pool</h4>
+            <dice-pool dice="player.dicePool"></dice-pool>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Hand</h4>
+            <cards-display cards="player.hand"></cards-display>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <action-menu actions="match.availableActions" ng-show="player.isTurn"></action-menu>
+        </div>
+    </div>
+</div>
+

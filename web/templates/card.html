@@ -1,0 +1,26 @@
+<div style="position: relative" ng-click="onSelected({card:card})" ng-class="{ isSelectableTargetCard: card.isSelectableTarget} ">
+    <img class="cardImage" ng-src="{{card.imagesrc}}"></img>
+
+    <div id="overlays">
+        <div style="position: absolute; top: 0px; right: 0px">
+            <die die="die" style="overflow: hidden" ng-repeat="die in card.unrolledDice track by $index">DIE</die>
+        </div>
+        <div style="position: absolute; bottom: 0px">
+            <die die="die" style="overflow: hidden" ng-repeat="die in card.resolvedDice track by $index">R-DIE</die>
+        </div>
+
+        <div ng-show="card.type_code === 'character'" style="position: absolute; bottom: 0px; left: 0px">
+            <div style="background: white; color: black; font-weight: bold; font-family: Roboto; border: 1px solid black; border-radius: 5px">S{{card.shields}}</div>
+        </div>
+
+        <div ng-show="card.type_code === 'character'" style="position: absolute; bottom: 0px; right: 0px">
+            <div style="background: white; color: black; font-weight: bold; font-family: Roboto; border: 1px solid black; border-radius: 5px">D{{card.damage}}</div>
+        </div>
+        
+        <div class="upgrades" ng-show="card.type_code === 'character'" style="position: absolute; bottom: 50px; right: 0px">
+            <div ng-repeat="upgrade in card.upgrades">
+                <card class="upgrade" card="upgrade"></card>
+            </div>
+        </div>
+    </div>
+</div>

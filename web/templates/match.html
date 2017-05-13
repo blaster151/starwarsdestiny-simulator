@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>{{match.player1.name}} vs. {{match.player2.name}}</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Player 1 -->
+        <div class="col-md-6 well">
+            <player-view match="match" player="match.player1"></player-view>
+        </div>
+
+        <!-- Player 2 -->
+        <div class="col-md-6 well">
+            <player-view match="match" player="match.player2"></player-view>
+        </div>
+    </div>
+</div>

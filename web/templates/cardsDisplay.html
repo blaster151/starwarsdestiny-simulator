@@ -1,0 +1,6 @@
+<div style="clear: both">
+    <card card="card" ng-repeat="card in cards track by $index" style="float: left; margin-right: 5px" ng-click="onSelected({card:card})">
+        <div>{{card.name}}</div>
+        <img class="cardImage" ng-src="{{card.imagesrc}}"></img>
+    </card>
+</div>
