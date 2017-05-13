@@ -26,6 +26,9 @@ function MatchCoordinator(match) {
 
         resetActivatedCards();
 
+        self.match.player1.field = self.match.player1.deck.getCharacters();
+        self.match.player2.field = self.match.player2.deck.getCharacters();
+
         self.match.player1.drawHand();
         self.match.player2.drawHand();
     }

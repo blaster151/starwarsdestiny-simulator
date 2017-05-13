@@ -120,10 +120,10 @@ function Match(player1, player2) {
                             dieToReroll.forEach(function (die) {
                                 die.roll();
                             });
+
+                            self.endTurn();
                         });
                     });
-
-                    self.endTurn();
                 }
             });
         }
@@ -169,8 +169,11 @@ function Match(player1, player2) {
                                 player.dicePool.splice(index, 1);
                             }
 
-                            if (key === "Resource")
+                            if (key === "Resource") {
                                 player.resources += die.rolledPointValue;
+
+                                self.endTurn();
+                            }
                             if (key === "Shield")
                                 self.selectorService.selectFrom(player.deck.getCharacters())
                                     .then(function (friendlyCharacter) {
@@ -180,6 +183,8 @@ function Match(player1, player2) {
                                         diceGroupings[key].forEach(function (die) {
                                             friendlyCharacter.shields += die.rolledPointValue;
                                         });
+
+                                        self.endTurn();
                                     });
                             if (key === "Disrupt") {
                                 var otherPlayer;
@@ -191,6 +196,8 @@ function Match(player1, player2) {
                                 diceGroupings[key].forEach(function(die) {
                                     otherPlayer.resources -= die.rolledPointValue;
                                 });
+
+                                self.endTurn();
                             }
                             if (key === "Melee" || key === "Ranged") {
                                 var otherPlayer;
@@ -207,13 +214,12 @@ function Match(player1, player2) {
                                         diceGroupings[key].forEach(function (die) {
                                             opponentCharacter.damage += die.rolledPointValue;
                                         });
+                                        self.endTurn();
                                     });
                             }
 
                             die.resolve();
                         });
-
-                        self.endTurn();
                     }
                 });
         });
@@ -233,6 +239,10 @@ function Match(player1, player2) {
                                 console.log("Played upgrade on ", character.name);
                                 character.upgrades.push(card);
                             });
+                    }
+
+                    if (card.type_code === "support") {
+                        player.field.push(card);
                     }
 
                     // Remove from hand

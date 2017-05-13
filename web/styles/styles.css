@@ -11,6 +11,10 @@ body {
     box-sizing: border-box;
 }
 
+.isActivated {
+    transform: rotate(90deg);
+}
+
 .action {
     border: 2px solid orange;
     border-radius: 12px;
