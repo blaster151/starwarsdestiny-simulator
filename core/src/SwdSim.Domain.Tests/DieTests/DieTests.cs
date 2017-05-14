@@ -16,7 +16,7 @@ namespace SwdSim.Domain.Tests.DieTests
         private Die.Face _validFace = new Die.Face(Symbol.MeleeDamage, 1, Modifier.Plus);
 
         [Test]
-        public void Construct_NullFaces_ThrowsException()
+        public void Die_Construct_NullFaces_ThrowsException()
         {
             Assert.Throws<InvalidDieException>(() =>
             {
@@ -25,7 +25,7 @@ namespace SwdSim.Domain.Tests.DieTests
         }
 
         [Test]
-        public void Construct_6ValidFaces_Success()
+        public void Die_Construct_6ValidFaces_Success()
         {
             Assert.DoesNotThrow(() =>
             {
@@ -35,7 +35,7 @@ namespace SwdSim.Domain.Tests.DieTests
         }
 
         [Test]
-        public void Construct_Not6Faces_ThrowsException()
+        public void Die_Construct_Not6Faces_ThrowsException()
         {
             Assert.Throws<InvalidDieException>(() =>
             {

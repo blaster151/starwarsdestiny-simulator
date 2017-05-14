@@ -17,7 +17,7 @@ namespace SwdSim.Domain.Tests.DieTests
         private Symbol[] ZeroValueSymbols = new[] { Symbol.Special, Symbol.Blank };
 
         [Test]
-        public void ValueDice_Valid_DoesNotThrow()
+        public void DieFace_Construct_ValueDice_Valid_DoesNotThrow()
         {
             foreach (var symbol in ValueSymbols)
             {
@@ -33,7 +33,7 @@ namespace SwdSim.Domain.Tests.DieTests
         }
 
         [Test]
-        public void ValueDice_Invalid_ThrowsException()
+        public void DieFace_Construct_ValueDice_Invalid_ThrowsException()
         {
             foreach (var symbol in ValueSymbols)
             {               
@@ -45,7 +45,7 @@ namespace SwdSim.Domain.Tests.DieTests
         }
 
         [Test]
-        public void ZeroValueDice_Valid_Succeeds()
+        public void DieFace_Construct_ZeroValueDice_Valid_Succeeds()
         {
             foreach (var symbol in ZeroValueSymbols)
             {
@@ -57,7 +57,7 @@ namespace SwdSim.Domain.Tests.DieTests
         }
 
         [Test]
-        public void ZeroValueDice_Invalid_ThrowsException()
+        public void DieFace_Construct_ZeroValueDice_Invalid_ThrowsException()
         {
             foreach (var symbol in ZeroValueSymbols)
             {
