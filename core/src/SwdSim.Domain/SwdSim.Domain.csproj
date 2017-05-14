@@ -49,8 +49,12 @@
     <Compile Include="Constructs\Cards\Upgrade.cs" />
     <Compile Include="Constructs\Deck.cs" />
     <Compile Include="Constructs\DestinyDeck.cs" />
+    <Compile Include="Constructs\Die.cs" />
     <Compile Include="Constructs\SetAsideArea.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Exceptions\DrawPileEmptyException.cs" />
+    <Compile Include="Exceptions\InvalidDieException.cs" />
+    <Compile Include="Exceptions\InvalidDieFaceException.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
