@@ -10,10 +10,12 @@ namespace SwdSim.Domain.Constructs
     public class SetAsideArea
     {
         public readonly List<Card> Cards;
+        public readonly List<Die> Dice;
 
         public SetAsideArea()
         {
             Cards = new List<Card>();
+            Dice = new List<Die>();
         }
     }
 }

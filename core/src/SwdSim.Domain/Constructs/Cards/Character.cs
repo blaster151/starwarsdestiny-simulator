@@ -8,6 +8,5 @@ namespace SwdSim.Domain.Constructs.Cards
 {
     public class Character : Card
     {
-
     }
 }

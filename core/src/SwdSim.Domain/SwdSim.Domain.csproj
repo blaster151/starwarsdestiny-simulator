@@ -55,6 +55,7 @@
     <Compile Include="Exceptions\DrawPileEmptyException.cs" />
     <Compile Include="Exceptions\InvalidDieException.cs" />
     <Compile Include="Exceptions\InvalidDieFaceException.cs" />
+    <Compile Include="Exceptions\NotEnoughResourcesException.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

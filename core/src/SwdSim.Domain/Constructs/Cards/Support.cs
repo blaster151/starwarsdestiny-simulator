@@ -8,6 +8,7 @@ namespace SwdSim.Domain.Constructs.Cards
 {
     public class Support : Card
     {
+       
 
     }
 }

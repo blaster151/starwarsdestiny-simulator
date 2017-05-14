@@ -38,6 +38,20 @@ namespace SwdSim.Domain.Tests.PlayerTests
         }
 
         [Test]
+        public void Player_Construct_DicePoolInitialized()
+        {
+            var player = new Player(_destinyDeck);
+            Assert.IsNotNull(player.DicePool);
+        }
+
+        [Test]
+        public void Player_Construct_HasZeroResourcesToStart()
+        {
+            var player = new Player(_destinyDeck);
+            Assert.AreEqual(0, player.ResourceCount);
+        }
+
+        [Test]
         public void Player_Construct_DrawPileInitializedWithDrawDeck()
         {
             var player = new Player(_destinyDeck);

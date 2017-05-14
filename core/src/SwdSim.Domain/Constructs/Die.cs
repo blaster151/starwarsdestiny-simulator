@@ -1,9 +1,8 @@
-﻿using SwdSim.Domain.Exceptions;
+﻿using SwdSim.Domain.Constructs.Cards;
+using SwdSim.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwdSim.Domain.Constructs
 {
@@ -11,12 +10,23 @@ namespace SwdSim.Domain.Constructs
     {
         public Face ActiveFace { get; private set; }
         public readonly List<Die.Face> Faces;
+        public Card Card { get; set; }
 
         public Die(List<Die.Face> faces)
         {
             if (faces?.Count != 6) throw new InvalidDieException("A star wars destiny die must have exactly 6 sides.");
             Faces = faces;
             ActiveFace = faces.First();
+        }
+
+        public void Roll()
+        {
+            Roll(new Random());
+        }
+
+        public void Roll(Random randomSeed)
+        {
+            ActiveFace = Faces[randomSeed.Next(0, 5)];
         }
 
         public class Face

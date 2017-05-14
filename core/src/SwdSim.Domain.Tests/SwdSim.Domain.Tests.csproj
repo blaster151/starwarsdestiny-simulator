@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="DieTests\DieTests.cs" />
     <Compile Include="DieTests\DieFaceTests.cs" />
+    <Compile Include="PlayerTests\PlayerResourceTests.cs" />
     <Compile Include="PlayerTests\PlayerDrawTests.cs" />
     <Compile Include="PlayerTests\PlayerSetupTests.cs" />
     <Compile Include="PlayerTests\PlayerConstructorTests.cs" />
