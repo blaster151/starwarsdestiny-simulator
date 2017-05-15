@@ -18,6 +18,10 @@ angular.module('swd').directive('die', ['selectorService',
                         selectorService.notifySelected(item.die);
                     }
                 };
+
+                scope.getDieTypeImage = function() {
+                    return "/images/melee.png";
+                };
             }
         };
     }

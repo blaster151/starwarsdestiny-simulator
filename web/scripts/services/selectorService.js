@@ -25,7 +25,7 @@ angular.module('swd').service('selectorService', ['$http', '$q', function($http,
         deferred = null;
 
         self.items.forEach(function (item) {
-            item.isSelectableTarget = true;
+            item.isSelectableTarget = false;
         });
     };
 

@@ -1,8 +1,12 @@
-<div ng-click="onSelected({die:die})" style="position: relative; background-color: azure; width: 50px; height: 50px; border-radius: 12px; border-width: 3px; border-style: solid; box-sizing: border-box;" ng-style="{'border-color': die.card.faction_code, 'background-color': die.card.faction_code }", ng-class="{ isSelectableTargetDie: die.isSelectableTarget} ">
-    <div style="border-radius: 20px; background-size: cover; background-repeat: no-repeat; height: 100%" 
-         ng-style="{'border-color': die.card.faction_code, 'background-image': 'url(' + die.card.imagesrc + ')'}"></div>
+<div class="die" ng-class="{ isSelectableTargetDie: die.isSelectableTarget} ">
+    <div ng-click="onSelected({die:die})" style="position: relative; background-color: azure; width: 50px; height: 50px; border-radius: 12px; border-width: 3px; border-style: solid; box-sizing: border-box; overflow: hidden" ng-style="{'border-color': die.card.faction_code, 'background-color': die.card.faction_code }">
+        <div style="border-radius: 20px; background-size: cover; background-repeat: no-repeat; height: 100%" 
+             ng-style="{'border-color': die.card.faction_code, 'background-image': 'url(' + die.card.imagesrc + ')'}"></div>
 
-    <div ng-show="die.rolledValue" style="background: black; color: white; font-weight: bold; font-family: Roboto; right: 50px; bottom: -5px; right: -5px; position: absolute; border-radius: 5px; padding: 3px;">
-        {{die.rolledValue}}
-    </div>
+        <div ng-show="die.rolledValue" style="background: black; color: white; font-weight: bold; font-family: Roboto; right: 50px; bottom: -5px; right: -5px; position: absolute; border-radius: 5px; padding: 3px; height: 100%; width: 50%; margin-right: 5px; text-align: center">
+            {{die.rolledPointValue}}
+            <div class="dieIcon {{die.rolledValueType}}"></div>
+            ></div>
+        </div>
+    </div>    
 </div>

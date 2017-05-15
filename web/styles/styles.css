@@ -2,13 +2,58 @@ body {
     font-family: Roboto;
 }
 
+.card {
+    width: 100px;    
+}
+
 .cardImage {
     max-width: 100px;
 }
 
+.die {
+    height: 44px;
+    width: 44px;
+    margin-right: 5px;
+}
+
+.dieIcon {
+    height: 16px;
+    width: 16px;
+    -webkit-mask-size: 16px;
+    background-color: white;
+    margin-top: -4px;
+    margin-left: -1px;
+}
+
+.dieIcon.MD {
+    -webkit-mask-image: url('/images/melee.png');
+}
+
+.dieIcon.RD {
+    -webkit-mask-image: url('/images/ranged.png');
+}
+
+.dieIcon.S {
+    -webkit-mask-image: url('/images/shield.png');
+}
+
+.dieIcon.Dc {
+    -webkit-mask-image: url('/images/discard.png');
+}
+
+.dieIcon.Dr {
+    -webkit-mask-image: url('/images/disrupt.png');
+}
+
+.dieIcon.F {
+    -webkit-mask-image: url('/images/focus.png');
+}
+
 .isSelectableTargetCard, .isSelectableTargetDie {
-    border: 1px solid darkred;
-    box-sizing: border-box;
+    border: 2px solid darkred;
+    /* box-sizing: border-box; */
+    /* margin-left: -5px; */
+    overflow: hidden;
 }
 
 .isActivated {

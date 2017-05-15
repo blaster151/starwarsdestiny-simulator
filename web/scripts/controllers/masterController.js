@@ -28,4 +28,60 @@ angular.module('swd').controller('masterController', ['$scope', '$timeout', 'car
 
         new MatchCoordinator($scope.match).begin();
     }
+
+    $scope.$watch("cards", function(newVal) {
+        if (!newVal) return;
+        if (newVal.length === 0) return;
+
+        var result = newVal[1];
+        result.isSelectableTarget = true;
+
+        console.log("result", result);
+        $scope.selectableCard = result;
+
+        var selectableDie = newVal[2].dice[0];
+        selectableDie.isSelectableTarget = true;
+            
+        $scope.selectableDie = selectableDie;
+
+        $scope.rolledDice = [
+            new Die(newVal[3]),
+            new Die(newVal[3]),
+            new Die(newVal[3]),
+            new Die(newVal[3]),
+            new Die(newVal[3]),
+            new Die(newVal[3])
+        ];
+        $scope.rolledDice[0].rolledPointValue = 1;
+        $scope.rolledDice[0].rolledValueType = "MD";
+        $scope.rolledDice[0].rolledValue = "1MD";
+
+        $scope.rolledDice[1].rolledPointValue = 1;
+        $scope.rolledDice[1].rolledValueType = "RD";
+        $scope.rolledDice[1].rolledValue = "1RD";
+
+        $scope.rolledDice[2].rolledPointValue = 1;
+        $scope.rolledDice[2].rolledValueType = "S";
+        $scope.rolledDice[2].rolledValue = "1S";
+
+        $scope.rolledDice[2].rolledPointValue = 1;
+        $scope.rolledDice[2].rolledValueType = "Dr";
+        $scope.rolledDice[2].rolledValue = "1Dr";
+
+        $scope.rolledDice[3].rolledPointValue = 1;
+        $scope.rolledDice[3].rolledValueType = "Dc";
+        $scope.rolledDice[3].rolledValue = "1Dc";
+
+        $scope.rolledDice[4].rolledPointValue = 1;
+        $scope.rolledDice[4].rolledValueType = "F";
+        $scope.rolledDice[4].rolledValue = "1F";
+
+        $scope.rolledDice[5].rolledPointValue = 1;
+        $scope.rolledDice[5].rolledValueType = "MD";
+        $scope.rolledDice[5].rolledValue = "+1MD";
+
+        //$scope.rolledDice[5].rolledPointValue = 1;
+        //$scope.rolledDice[5].rolledValueType = "RD";
+        //$scope.rolledDice[5].rolledValue = "3MD1";
+    });
 }]);

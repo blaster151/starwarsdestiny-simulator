@@ -1,4 +1,4 @@
-<div style="position: relative" ng-class="{ isActivated: card.isActivated }" ng-click="onSelected({card:card})" ng-class="{ isSelectableTargetCard: card.isSelectableTarget} ">
+<div style="position: relative" class="card" ng-class="{ isActivated: card.isActivated, isSelectableTargetCard: card.isSelectableTarget }" ng-click="onSelected({card:card})">
     <img class="cardImage" ng-src="{{card.imagesrc}}"></img>
 
     <div id="overlays">
