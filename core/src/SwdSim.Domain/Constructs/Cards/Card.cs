@@ -8,6 +8,11 @@ namespace SwdSim.Domain.Constructs.Cards
 {
     public class Card
     {
+        public Card()
+        {
+            Dice = new List<Die>();
+        }
 
+        public List<Die> Dice { get; set; }
     }
 }

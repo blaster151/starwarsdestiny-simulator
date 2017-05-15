@@ -8,5 +8,6 @@ namespace SwdSim.Domain.Constructs.Cards
 {
     public class Upgrade : Card
     {
+       
     }
 }

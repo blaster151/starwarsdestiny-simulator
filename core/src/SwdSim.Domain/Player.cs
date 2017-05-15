@@ -17,6 +17,8 @@ namespace SwdSim.Domain
         public readonly Battlefield Battlefield;
         public readonly SetAsideArea SetAsideArea;
         public readonly List<Card> Hand;
+        public readonly List<Die> DicePool;
+        public int ResourceCount { get; private set; }
 
         public Player(DestinyDeck deck)
         {
@@ -26,9 +28,12 @@ namespace SwdSim.Domain
             Characters = new List<Character>(Deck.Team);
             DrawPile = new Deck();
             Hand = new List<Card>();
+            DicePool = new List<Die>();
+            ResourceCount = 0;
             foreach (var card in Deck.DrawDeck)
             {
                 DrawPile.Push(card);
+                SetAsideArea.Dice.AddRange(card.Dice);
             }
            
             Battlefield = deck.Battlefield;
@@ -46,6 +51,17 @@ namespace SwdSim.Domain
         {
             if (DrawPile.Count == 0) throw new DrawPileEmptyException("Draw Pile is Empty - Unable to Draw");
             Hand.Add(DrawPile.Pop());
+        }
+
+        public void TakeResource(int resourceCount = 1)
+        {
+            ResourceCount += resourceCount;       
+        }
+
+        public void SpendResource(int resourceCount = 1)
+        {
+            if (ResourceCount < resourceCount) throw new NotEnoughResourcesException();
+            ResourceCount -= resourceCount;
         }
     }
 
