@@ -9,6 +9,7 @@ namespace SwDestinyDb.Api
         List<Card> GetCards();
         List<Card> GetCards(Set set);
         List<Card> GetCards(string setCode);
+        DeckList GetDeckList(string id);
 
     } 
 }

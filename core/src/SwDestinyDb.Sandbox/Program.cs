@@ -21,6 +21,7 @@ namespace SwDestinyDb.Sandbox
                     Console.WriteLine($"\t{card.position} - {card.name}");
                 }
             }
+            var decklist = api.GetDeckList("9311");
             Console.ReadKey();
         }
     }

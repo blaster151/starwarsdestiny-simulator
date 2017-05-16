@@ -50,5 +50,13 @@ namespace SwDestinyDb.Api
             request.AddParameter("setCode", setCode, ParameterType.UrlSegment);
             return client.Execute<List<Card>>(request).Data;
         }
+
+        public DeckList GetDeckList(string id)
+        {
+            var client = BuildClient();
+            var request = new RestRequest("decklist/{id}.json");
+            request.AddParameter("id", id, ParameterType.UrlSegment);
+            return client.Execute<DeckList>(request).Data;
+        }
     }
 }

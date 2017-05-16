@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dtos\Card.cs" />
+    <Compile Include="Dtos\DeckList.cs" />
     <Compile Include="IPublicApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicApi.cs" />
