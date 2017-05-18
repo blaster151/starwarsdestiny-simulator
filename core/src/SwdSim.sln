@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwDestinyDb.Api", "SwDestin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwDestinyDb.Sandbox", "SwDestinyDb.Sandbox\SwDestinyDb.Sandbox.csproj", "{E9EAB53E-9B3B-4CF6-8E04-827FC0C314C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwdSim.Data", "SwdSim.Data\SwdSim.Data.csproj", "{7F8733A2-C2DF-437E-993D-12AE29DCA08E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E9EAB53E-9B3B-4CF6-8E04-827FC0C314C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9EAB53E-9B3B-4CF6-8E04-827FC0C314C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9EAB53E-9B3B-4CF6-8E04-827FC0C314C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F8733A2-C2DF-437E-993D-12AE29DCA08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F8733A2-C2DF-437E-993D-12AE29DCA08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F8733A2-C2DF-437E-993D-12AE29DCA08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F8733A2-C2DF-437E-993D-12AE29DCA08E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
