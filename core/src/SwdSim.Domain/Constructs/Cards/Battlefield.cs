@@ -8,5 +8,8 @@ namespace SwdSim.Domain.Constructs.Cards
 {
     public class Battlefield : Card
     {
+        public Battlefield() : base(Faction.Neutral, Affiliation.Neutral)
+        {
+        }
     }
 }

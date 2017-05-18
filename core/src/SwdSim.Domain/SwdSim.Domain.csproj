@@ -40,11 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cards\Awakenings\001_CaptainPhasma.cs" />
     <Compile Include="Constructs\Cards\Battlefield.cs" />
     <Compile Include="Constructs\Cards\Card.cs" />
     <Compile Include="Constructs\Cards\Character.cs" />
     <Compile Include="Constructs\Cards\EventCard.cs" />
+    <Compile Include="Constructs\Cards\PlayableCard.cs" />
     <Compile Include="Constructs\Cards\Support.cs" />
     <Compile Include="Constructs\Cards\Upgrade.cs" />
     <Compile Include="Constructs\Deck.cs" />
@@ -55,13 +55,12 @@
     <Compile Include="Exceptions\DrawPileEmptyException.cs" />
     <Compile Include="Exceptions\InvalidDieException.cs" />
     <Compile Include="Exceptions\InvalidDieFaceException.cs" />
+    <Compile Include="Exceptions\MaxCharacterDiceExceededException.cs" />
     <Compile Include="Exceptions\NotEnoughResourcesException.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Cards\SoR\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

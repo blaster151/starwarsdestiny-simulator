@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SwdSim.Domain.Constructs.Cards
 {
     public class Card
     {
-        public Card()
-        {
-            Dice = new List<Die>();
-        }
 
-        public List<Die> Dice { get; set; }
+        public readonly Faction Faction;
+        public readonly Affiliation Affiliation;
+
+        public Card(Faction faction, Affiliation affiliation)
+        {
+            Faction = faction;
+            Affiliation = affiliation;
+        }
+      
     }
 }

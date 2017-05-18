@@ -18,10 +18,7 @@ namespace SwdSim.Domain.Tests.PlayerTests
         [SetUp]
         public void Setup()
         {
-            var cards = Enumerable.Range(1, 30).Select(m => new Card());
-            var characters = Enumerable.Range(1, 2).Select(m => new Character());
-            var bf = new Battlefield();
-            _destinyDeck = new DestinyDeck(characters, cards, bf);
+            _destinyDeck = TestUtils.GetValidDestinyDeck();
             _player = new Player(_destinyDeck);
         }
 

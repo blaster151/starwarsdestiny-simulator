@@ -24,4 +24,38 @@ namespace SwdSim.Domain
     {
         Plus
     }
+
+    public enum Affiliation
+    {
+        Hero,
+        Villian,
+        Neutral
+    }
+
+    public enum Faction
+    {
+        /// <summary>
+        /// Blue
+        /// </summary>
+        Force,
+        /// <summary>
+        /// Red
+        /// </summary>
+        Command,
+        /// <summary>
+        /// Yellow
+        /// </summary>
+        Rogue,
+        /// <summary>
+        /// Gray
+        /// </summary>
+        Neutral
+    }
+
+    public enum SubType
+    {
+        Vehicle,
+        Weapon,
+        Ability
+    }
 }
