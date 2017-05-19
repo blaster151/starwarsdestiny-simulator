@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace SwdSim.Domain
 {
-    
+    public enum CardType
+    {
+        Character,
+        Upgrade,
+        Support,
+        Event,
+        Battlefield
+    }
+
     public enum Symbol
     {
         Blank,

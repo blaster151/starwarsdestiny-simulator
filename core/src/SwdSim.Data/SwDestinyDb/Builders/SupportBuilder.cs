@@ -10,7 +10,7 @@ namespace SwdSim.Data.SwDestinyDb.Builders
 {
     public class SupportBuilder
     {
-        public Support Build(Card card)
+        public Support Build(CardDefinition card)
         {
             return null;
         }

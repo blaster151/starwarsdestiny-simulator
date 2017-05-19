@@ -10,7 +10,7 @@ namespace SwdSim.Data.SwDestinyDb.Builders
 {
     public class BattlefieldBuilder
     {
-        public Battlefield Build(Card card)
+        public Battlefield Build(CardDefinition card)
         {
             return null;
         }

@@ -10,7 +10,7 @@ namespace SwdSim.Data.SwDestinyDb.Builders
 {
     public class EventCardBuilder
     {
-        public EventCard Build(Card card)
+        public EventCard Build(CardDefinition card)
         {
             return null;
         }

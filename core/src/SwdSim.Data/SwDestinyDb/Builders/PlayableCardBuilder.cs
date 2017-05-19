@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using SwdSim.Domain.Constructs.Cards;
 using Card = SwDestinyDb.Api.Dtos.Card;
+using SwDestinyDbTypeCode = SwDestinyDb.Api.TypeCode;
+using SwdSim.Domain;
 
 namespace SwdSim.Data.SwDestinyDb.Builders
 {
@@ -14,7 +16,14 @@ namespace SwdSim.Data.SwDestinyDb.Builders
         private readonly UpgradeBuilder _upgradeBuilder = new UpgradeBuilder();
         private readonly EventCardBuilder _eventCardBuilder = new EventCardBuilder();
 
-        public PlayableCard Build(Card card)
+        public readonly CardType[] PlayableCardTypes = new[] { CardType.Event, CardType.Support, CardType.Upgrade };
+
+        public bool CanBuildCard(CardDefinition card)
+        {
+            return PlayableCardTypes.Contains(card.CardType);
+        }
+
+        public PlayableCard Build(CardDefinition card)
         {
             return null;
         }

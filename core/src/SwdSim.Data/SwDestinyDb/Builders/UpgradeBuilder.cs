@@ -10,7 +10,7 @@ namespace SwdSim.Data.SwDestinyDb.Builders
 {
     public class UpgradeBuilder
     {
-        public Upgrade Build(Card card)
+        public Upgrade Build(CardDefinition card)
         {
             return null;
         }

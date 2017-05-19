@@ -42,12 +42,17 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SwDestinyDb\Builders\BattlefieldBuilder.cs" />
-    <Compile Include="SwDestinyDb\Builders\DestinyDeckBuilder.cs" />
+    <Compile Include="SwDestinyDb\DestinyDeckBuilder.cs" />
+    <Compile Include="SwDestinyDb\IDestinyDeckBuilder.cs" />
     <Compile Include="SwDestinyDb\Builders\PlayableCardBuilder.cs" />
     <Compile Include="SwDestinyDb\Builders\SupportBuilder.cs" />
     <Compile Include="SwDestinyDb\Builders\EventCardBuilder.cs" />
     <Compile Include="SwDestinyDb\Builders\UpgradeBuilder.cs" />
     <Compile Include="SwDestinyDb\Builders\CharacterBuilder.cs" />
+    <Compile Include="SwDestinyDb\CardDefinition.cs" />
+    <Compile Include="SwDestinyDb\DeckRepository.cs" />
+    <Compile Include="SwDestinyDb\Exceptions\DeckListNotFoundException.cs" />
+    <Compile Include="SwDestinyDb\ICardDefinitionService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SwDestinyDb.Api\SwDestinyDb.Api.csproj">
