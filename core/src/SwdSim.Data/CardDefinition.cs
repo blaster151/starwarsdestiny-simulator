@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwdSim.Data.SwDestinyDb
+namespace SwdSim.Data
 {
     public class CardDefinition
     {
@@ -16,7 +16,7 @@ namespace SwdSim.Data.SwDestinyDb
         public Affiliation Affiliation { get; set; }
         public Faction Faction { get; set; }
         public SubType SubType { get;set;}
-        public Die.Face[] DieDefinition { get; set; }
+        public List<Die.Face> DieDefinition { get; set; }
         public int? Cost { get; set; }
         public int? Health { get; set; }
         public int? Points { get; set; }

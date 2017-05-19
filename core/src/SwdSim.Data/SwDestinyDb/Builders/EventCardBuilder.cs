@@ -12,7 +12,10 @@ namespace SwdSim.Data.SwDestinyDb.Builders
     {
         public EventCard Build(CardDefinition card)
         {
-            return null;
+            if (card.CardType != Domain.CardType.Event) throw new Exception("Card is not an event.");
+            var @event = new EventCard(card.Faction, card.Affiliation, card.Cost.Value);
+            //TODO - add behaviors           
+            return @event;
         }
     }
 }

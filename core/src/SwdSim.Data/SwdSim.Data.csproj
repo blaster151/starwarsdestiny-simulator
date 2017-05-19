@@ -49,7 +49,7 @@
     <Compile Include="SwDestinyDb\Builders\EventCardBuilder.cs" />
     <Compile Include="SwDestinyDb\Builders\UpgradeBuilder.cs" />
     <Compile Include="SwDestinyDb\Builders\CharacterBuilder.cs" />
-    <Compile Include="SwDestinyDb\CardDefinition.cs" />
+    <Compile Include="CardDefinition.cs" />
     <Compile Include="SwDestinyDb\DeckRepository.cs" />
     <Compile Include="SwDestinyDb\Exceptions\DeckListNotFoundException.cs" />
     <Compile Include="SwDestinyDb\ICardDefinitionService.cs" />

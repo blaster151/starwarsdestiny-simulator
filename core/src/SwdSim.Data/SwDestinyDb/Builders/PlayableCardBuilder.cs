@@ -25,7 +25,18 @@ namespace SwdSim.Data.SwDestinyDb.Builders
 
         public PlayableCard Build(CardDefinition card)
         {
-            return null;
+            if (!CanBuildCard(card)) throw new Exception();
+            switch (card.CardType)
+            {
+                case CardType.Event:
+                    return _eventCardBuilder.Build(card);
+                case CardType.Support:
+                    return _supportBuilder.Build(card);
+                case CardType.Upgrade:
+                    return _upgradeBuilder.Build(card);
+                default:
+                    throw new NotImplementedException();
+            }
         }
     }
 }
