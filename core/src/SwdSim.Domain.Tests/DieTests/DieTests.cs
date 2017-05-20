@@ -13,7 +13,7 @@ namespace SwdSim.Domain.Tests.DieTests
     [TestFixture]
     public class DieTests
     {
-        private Die.Face _validFace = new Die.Face(Symbol.MeleeDamage, 1, Modifier.Plus);
+        private Die.Face _validFace = new Die.Face(Symbol.MeleeDamage, 1, Modifier.Plus, 0);
 
         [Test]
         public void Die_Construct_NullFaces_ThrowsException()

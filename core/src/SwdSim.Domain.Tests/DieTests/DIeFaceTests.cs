@@ -25,8 +25,8 @@ namespace SwdSim.Domain.Tests.DieTests
                 {
                     Assert.DoesNotThrow(() =>
                     {
-                        var face = new Die.Face(symbol, i, null);
-                        face = new Die.Face(symbol, i, Modifier.Plus);
+                        var face = new Die.Face(symbol, i, null, 0);
+                        face = new Die.Face(symbol, i, Modifier.Plus, 0);
                     });
                 }                
             }
@@ -39,7 +39,7 @@ namespace SwdSim.Domain.Tests.DieTests
             {               
                 Assert.Throws<InvalidDieFaceException>(() =>
                 {
-                    var face = new Die.Face(symbol, 0, null);
+                    var face = new Die.Face(symbol, 0, null, 0);
                 });                
             }
         }
@@ -51,7 +51,7 @@ namespace SwdSim.Domain.Tests.DieTests
             {
                 Assert.DoesNotThrow(() =>
                 {
-                    var face = new Die.Face(symbol, 0, null);
+                    var face = new Die.Face(symbol, 0, null, 0);
                 });
             }          
         }
@@ -63,11 +63,11 @@ namespace SwdSim.Domain.Tests.DieTests
             {
                 Assert.Throws<InvalidDieFaceException>(() =>
                 {
-                    var face = new Die.Face(symbol, 1, null);
+                    var face = new Die.Face(symbol, 1, null,0 );
                 });
                 Assert.Throws<InvalidDieFaceException>(() =>
                 {
-                    var face = new Die.Face(symbol, 0, Modifier.Plus);
+                    var face = new Die.Face(symbol, 0, Modifier.Plus, 0);
                 });
             }
         }

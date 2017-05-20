@@ -64,6 +64,8 @@ namespace SwdSim.Domain
     {
         Vehicle,
         Weapon,
-        Ability
+        Ability,
+        Equipment,
+        Droid
     }
 }

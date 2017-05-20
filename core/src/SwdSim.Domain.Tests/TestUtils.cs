@@ -20,7 +20,7 @@ namespace SwdSim.Domain.Tests
 
         public static List<Die.Face> GetValidDieDefinition()
         {
-            return Enumerable.Range(1, 6).Select(m => new Die.Face(Symbol.Blank, 0, null)).ToList();
+            return Enumerable.Range(1, 6).Select(m => new Die.Face(Symbol.Blank, 0, null, 0)).ToList();
         }
 
         public static Character GetValidCharacter(bool isUnique, int points, int? elitePoints)

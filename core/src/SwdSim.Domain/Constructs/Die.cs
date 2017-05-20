@@ -34,13 +34,15 @@ namespace SwdSim.Domain.Constructs
             public readonly Symbol? Symbol;
             public readonly int Value;
             public readonly Modifier? Modifer;
+            public readonly int ResourceCost;
 
-            public Face(Symbol? symbol, int value, Modifier? modifier)
+            public Face(Symbol? symbol, int value, Modifier? modifier, int resourceCost)
             {
                 validateFace(symbol, value, modifier);
                 Symbol = symbol;
                 Value = value;
                 Modifer = modifier;
+                ResourceCost = resourceCost;
             }
 
             private void validateFace(Symbol? symbol, int value, Modifier? modifier)

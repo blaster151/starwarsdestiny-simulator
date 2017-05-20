@@ -42,6 +42,17 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SwDestinyDb\Builders\BattlefieldBuilder.cs" />
+    <Compile Include="SwDestinyDb\CardDefinitionService.cs" />
+    <Compile Include="SwDestinyDb\Converters\AffiliationConverter.cs" />
+    <Compile Include="SwDestinyDb\Converters\CardTypeConverter.cs" />
+    <Compile Include="SwDestinyDb\Converters\DieConverter.cs" />
+    <Compile Include="SwDestinyDb\Converters\DieFaceConverter.cs" />
+    <Compile Include="SwDestinyDb\Converters\ElitePointsConverter.cs" />
+    <Compile Include="SwDestinyDb\Converters\FactionConverter.cs" />
+    <Compile Include="SwDestinyDb\Converters\ModifierConverter.cs" />
+    <Compile Include="SwDestinyDb\Converters\PointsConverter.cs" />
+    <Compile Include="SwDestinyDb\Converters\SubTypeConverter.cs" />
+    <Compile Include="SwDestinyDb\Converters\SymbolConverter.cs" />
     <Compile Include="SwDestinyDb\DestinyDeckBuilder.cs" />
     <Compile Include="SwDestinyDb\IDestinyDeckBuilder.cs" />
     <Compile Include="SwDestinyDb\Builders\PlayableCardBuilder.cs" />
