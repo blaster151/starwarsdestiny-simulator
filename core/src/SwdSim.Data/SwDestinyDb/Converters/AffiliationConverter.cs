@@ -10,9 +10,9 @@ namespace SwdSim.Data.SwDestinyDb.Converters
 {
     internal class AffiliationConverter
     {
-        internal Affiliation Convert(Card card)
+        internal Affiliation Convert(string affiliation_code)
         {
-            switch (card.affiliation_code)
+            switch (affiliation_code)
             {
                 case "hero": return Affiliation.Hero;
                 case "neutral": return Affiliation.Neutral;

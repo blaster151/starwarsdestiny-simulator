@@ -10,9 +10,9 @@ namespace SwdSim.Data.SwDestinyDb.Converters
 {
     internal class SubTypeConverter
     {
-        internal SubType Convert(Card card)
+        internal SubType Convert(string subtype_code)
         {
-            switch (card.subtype_code)
+            switch (subtype_code)
             {
                 case "vehicle": return SubType.Vehicle;
                 case "ability": return SubType.Ability;

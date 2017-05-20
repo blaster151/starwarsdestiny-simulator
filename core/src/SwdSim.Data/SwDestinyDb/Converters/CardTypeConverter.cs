@@ -10,9 +10,9 @@ namespace SwdSim.Data.SwDestinyDb.Converters
 {
     internal class CardTypeConverter
     {
-        internal CardType Convert(Card card)
+        internal CardType Convert(string type_code)
         {
-            switch (card.type_code)
+            switch (type_code)
             {
                 case "character": return CardType.Character;
                 case "event": return CardType.Event;

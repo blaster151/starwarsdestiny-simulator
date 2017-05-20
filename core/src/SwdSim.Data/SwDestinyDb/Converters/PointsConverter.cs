@@ -9,12 +9,12 @@ namespace SwdSim.Data.SwDestinyDb.Converters
 {
     internal class PointsConverter
     {
-        internal virtual int? Convert(Card card)
+        internal virtual int? Convert(string points)
         {
-            if (card.points == null) return null;
-            return card.points.Contains("/")
-                ? int.Parse(GetPointsArray(card.points)[0])
-                : int.Parse(card.points);
+            if (points == null) return null;
+            return points.Contains("/")
+                ? int.Parse(GetPointsArray(points)[0])
+                : int.Parse(points);
         }
 
         protected string[] GetPointsArray(string points)

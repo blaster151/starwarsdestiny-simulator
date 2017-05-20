@@ -1,18 +1,13 @@
-﻿using SwDestinyDb.Api.Dtos;
-using SwdSim.Domain;
+﻿using SwdSim.Domain;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwdSim.Data.SwDestinyDb.Converters
 {
     internal class FactionConverter
     {
-        internal Faction Convert(Card card)
+        internal Faction Convert(string faction_code)
         {
-            switch (card.faction_code)
+            switch (faction_code)
             {
                 case "gray": return Faction.Neutral;
                 case "red": return Faction.Command;

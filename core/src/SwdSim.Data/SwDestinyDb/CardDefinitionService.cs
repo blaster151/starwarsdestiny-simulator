@@ -22,17 +22,17 @@ namespace SwdSim.Data.SwDestinyDb
             return new CardDefinition()
             {
                 Name = card.name,
-                Affiliation = _affiliationConverter.Convert(card),
-                CardType = _cardTypeConverter.Convert(card),
+                Affiliation = _affiliationConverter.Convert(card.affiliation_code),
+                CardType = _cardTypeConverter.Convert(card.type_code),
                 Cost = card.cost,
                 Health = card.health,
                 HasDie = card.has_die,
-                Faction = _factionConverter.Convert(card),
+                Faction = _factionConverter.Convert(card.faction_code),
                 SubTitle = card.subtitle,
-                SubType = _subTypeConverter.Convert(card),
+                SubType = _subTypeConverter.Convert(card.subtype_code),
                 IsUnique = card.is_unique,
-                Points = _pointsConverter.Convert(card),
-                ElitePoints = _elitePointsConverter.Convert(card),
+                Points = _pointsConverter.Convert(card.points),
+                ElitePoints = _elitePointsConverter.Convert(card.points),
                 DieDefinition = _dieConverter.ConvertSidesToDieDefinition(card)
             };
         }

@@ -53,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwDestinyDb\ConverterTests\SymbolConverterTests.cs" />
+    <Compile Include="SwDestinyDb\ConverterTests\SubTypeConverterTests.cs" />
+    <Compile Include="SwDestinyDb\ConverterTests\FactionConverterTests.cs" />
+    <Compile Include="SwDestinyDb\ConverterTests\CardTypeConverterTests.cs" />
+    <Compile Include="SwDestinyDb\ConverterTests\AffiliationConverterTests.cs" />
+    <Compile Include="SwDestinyDb\ConverterTests\PointsConverterTests.cs" />
     <Compile Include="SwDestinyDb\DeckRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>

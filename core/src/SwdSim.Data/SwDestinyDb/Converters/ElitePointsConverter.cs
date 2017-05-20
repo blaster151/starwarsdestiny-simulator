@@ -9,11 +9,11 @@ namespace SwdSim.Data.SwDestinyDb.Converters
 {
     internal class ElitePointsConverter : PointsConverter
     {
-        internal override int? Convert(Card card)
+        internal override int? Convert(string points)
         {
-            if (card.points == null) return null;
-            return card.points.Contains("/")
-                ? int.Parse(GetPointsArray(card.points)[1])
+            if (points == null) return null;
+            return points.Contains("/")
+                ? int.Parse(GetPointsArray(points)[1])
                 : (int?)null;
         }
 
