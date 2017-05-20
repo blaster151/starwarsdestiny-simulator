@@ -15,8 +15,8 @@ namespace SwdSim.Data.SwDestinyDb
 {
     public class DestinyDeckBuilder : IDestinyDeckBuilder
     {
-        private ICardDefinitionService _cardDefinitionService;
-        public DestinyDeckBuilder(ICardDefinitionService cardDefinitionService)
+        private ICardDefinitionConverter _cardDefinitionService;
+        public DestinyDeckBuilder(ICardDefinitionConverter cardDefinitionService)
         {
             _cardDefinitionService = cardDefinitionService;
         }
@@ -26,7 +26,7 @@ namespace SwdSim.Data.SwDestinyDb
       
         public DestinyDeck Build(DeckList deckList, List<Card> destinyCards)
         {
-            var cards = destinyCards.ToDictionary(m => m.code, m => _cardDefinitionService.GetDefinition(m));
+            var cards = destinyCards.ToDictionary(m => m.code, m => _cardDefinitionService.Convert(m));
             Func<string, CardDefinition> cardLookup = code => cards[code];
 
             var characters = BuildCharacters(deckList, cardLookup);

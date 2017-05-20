@@ -9,10 +9,10 @@ namespace SwdSim.Data.SwDestinyDb.Converters
     {
         private readonly DieFaceConverter _dieFaceConverter = new DieFaceConverter();
 
-        internal List<Die.Face> ConvertSidesToDieDefinition(Card card)
+        internal List<Die.Face> Convert(List<string> sides)
         {
-            if (card.sides == null) return null;
-            return card.sides.Select(face => _dieFaceConverter.Convert(face)).ToList();
+            if (sides == null) return null;
+            return sides.Select(face => _dieFaceConverter.Convert(face)).ToList();
         }
     }
 }

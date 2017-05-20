@@ -5,9 +5,9 @@ using SwdSim.Domain;
 using SwdSim.Domain.Constructs;
 using SwdSim.Data.SwDestinyDb.Converters;
 
-namespace SwdSim.Data.SwDestinyDb
+namespace SwdSim.Data.SwDestinyDb.Converters
 {
-    public class CardDefinitionService : ICardDefinitionService
+    public class CardDefinitionConverter : ICardDefinitionConverter
     {
         private readonly DieConverter _dieConverter = new DieConverter();
         private readonly AffiliationConverter _affiliationConverter = new AffiliationConverter();
@@ -17,7 +17,7 @@ namespace SwdSim.Data.SwDestinyDb
         private readonly PointsConverter _pointsConverter = new PointsConverter();
         private readonly ElitePointsConverter _elitePointsConverter = new ElitePointsConverter();
 
-        public CardDefinition GetDefinition(Card card)
+        public CardDefinition Convert(Card card)
         {
             return new CardDefinition()
             {
@@ -33,7 +33,7 @@ namespace SwdSim.Data.SwDestinyDb
                 IsUnique = card.is_unique,
                 Points = _pointsConverter.Convert(card.points),
                 ElitePoints = _elitePointsConverter.Convert(card.points),
-                DieDefinition = _dieConverter.ConvertSidesToDieDefinition(card)
+                DieDefinition = _dieConverter.Convert(card.sides)
             };
         }
               

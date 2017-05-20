@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SwDestinyDb\Builders\BattlefieldBuilder.cs" />
-    <Compile Include="SwDestinyDb\CardDefinitionService.cs" />
+    <Compile Include="SwDestinyDb\Converters\CardDefinitionConverter.cs" />
     <Compile Include="SwDestinyDb\Converters\AffiliationConverter.cs" />
     <Compile Include="SwDestinyDb\Converters\CardTypeConverter.cs" />
     <Compile Include="SwDestinyDb\Converters\DieConverter.cs" />
@@ -63,7 +63,7 @@
     <Compile Include="CardDefinition.cs" />
     <Compile Include="SwDestinyDb\DeckRepository.cs" />
     <Compile Include="SwDestinyDb\Exceptions\DeckListNotFoundException.cs" />
-    <Compile Include="SwDestinyDb\ICardDefinitionService.cs" />
+    <Compile Include="SwDestinyDb\ICardDefinitionConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SwDestinyDb.Api\SwDestinyDb.Api.csproj">
