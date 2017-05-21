@@ -8,7 +8,8 @@ namespace SwDestinyDb.Api
 
         protected override void Initialize()
         {
-            Container.RegisterType<IPublicApi, PublicApi>(new InjectionConstructor());           
+            Container.RegisterType<IPublicApi, PublicApi>("Http", new InjectionConstructor());
+            Container.RegisterType<IPublicApi, PublicApiInMemoryCache>(new InjectionConstructor(new ResolvedParameter<IPublicApi>("Http")));
         }
     }
 }

@@ -17,13 +17,16 @@ namespace SwDestinyDb.Sandbox
             container.AddExtension(new SwdSim.Data.UnityIocModule());
             container.AddExtension(new SwDestinyDb.Api.UnityIocModule());
 
-            var deckListId = "9311";
+            var deckListId = 9311;
 
             var repo = container.Resolve<IDeckRepository>();
-            var deck = repo.GetDestinyDeck(deckListId);
-
-            WriteDeckToConsole(deck);
            
+            for (int i = deckListId; i < deckListId + 5; i++)
+            {
+                var deck = repo.GetDestinyDeck(i.ToString());
+                WriteDeckToConsole(deck);
+            }
+                     
             Console.ReadKey();
         }
 
