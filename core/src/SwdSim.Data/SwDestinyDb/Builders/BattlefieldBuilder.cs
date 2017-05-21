@@ -13,7 +13,7 @@ namespace SwdSim.Data.SwDestinyDb.Builders
         public Battlefield Build(CardDefinition card)
         {
             if (card.CardType != Domain.CardType.Battlefield) throw new Exception("Card is not a Battlefield.");
-            var battlefield = new Battlefield(); //todo - name, text etc.
+            var battlefield = new Battlefield(card.Name); 
             //TODO - add behaviors
             return battlefield;
         }

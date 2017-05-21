@@ -12,9 +12,9 @@ namespace SwdSim.Domain.Tests
     {
         public static DestinyDeck GetValidDestinyDeck()
         {
-            var cards = Enumerable.Range(1, 30).Select(m => new PlayableCard(Faction.Command, Affiliation.Villian, 1));
+            var cards = Enumerable.Range(1, 30).Select(m => new PlayableCard("PlayableCard", Faction.Command, Affiliation.Villian, 1));
             var characters = Enumerable.Range(1, 2).Select(m => GetValidCharacter(false, 10, null));
-            var bf = new Battlefield();
+            var bf = new Battlefield("Battlefield");
             return new DestinyDeck(characters, cards, bf);
         }
 
@@ -26,7 +26,7 @@ namespace SwdSim.Domain.Tests
         public static Character GetValidCharacter(bool isUnique, int points, int? elitePoints)
         {
             var dieDefinition = GetValidDieDefinition();
-            return new Character(Faction.Command, Affiliation.Villian, 10, dieDefinition, isUnique, points, elitePoints);
+            return new Character("Character", Faction.Command, Affiliation.Villian, 10, dieDefinition, isUnique, points, elitePoints);
         }
     }
 }

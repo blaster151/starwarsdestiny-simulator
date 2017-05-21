@@ -12,7 +12,7 @@ namespace SwdSim.Domain.Constructs.Cards
         public readonly int Points;
         public readonly int? ElitePoints;
 
-        public Character(Faction faction, Affiliation affiliation, int health, List<Die.Face> dieDefinition, bool isUnique, int points, int? elitePoints) : base(faction, affiliation)
+        public Character(string name, Faction faction, Affiliation affiliation, int health, List<Die.Face> dieDefinition, bool isUnique, int points, int? elitePoints) : base(name, faction, affiliation)
         {
             Health = health;
             DieDefinition = dieDefinition;

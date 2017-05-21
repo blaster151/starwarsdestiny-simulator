@@ -7,11 +7,13 @@ namespace SwdSim.Domain.Constructs.Cards
 
         public readonly Faction Faction;
         public readonly Affiliation Affiliation;
+        public readonly string Name;
 
-        public Card(Faction faction, Affiliation affiliation)
+        public Card(string name, Faction faction, Affiliation affiliation)
         {
             Faction = faction;
             Affiliation = affiliation;
+            Name = name;
         }
       
     }

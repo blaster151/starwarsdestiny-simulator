@@ -14,7 +14,7 @@ namespace SwdSim.Data.SwDestinyDb.Builders
         public Character Build(CardDefinition card, int numberOfDice)
         {
             if (card.CardType != Domain.CardType.Character) throw new Exception("Card is not a character.");
-            var character = new Character(card.Faction, card.Affiliation, card.Health.Value, card.DieDefinition, card.IsUnique, card.Points.Value, card.ElitePoints);
+            var character = new Character(card.Name, card.Faction, card.Affiliation, card.Health.Value, card.DieDefinition, card.IsUnique, card.Points.Value, card.ElitePoints);
             Enumerable.Range(1, numberOfDice).ToList().ForEach(i => { character.AddDie(); });
             return character;
         }

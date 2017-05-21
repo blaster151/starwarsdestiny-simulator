@@ -13,7 +13,7 @@ namespace SwdSim.Data.SwDestinyDb.Builders
         public Upgrade Build(CardDefinition card)
         {
             if (card.CardType != Domain.CardType.Upgrade) throw new Exception("Card is not an Upgrade.");
-            var upgrade = new Upgrade(card.Faction, card.Affiliation, card.Cost.Value, card.SubType, card.DieDefinition);
+            var upgrade = new Upgrade(card.Name, card.Faction, card.Affiliation, card.Cost.Value, card.SubType, card.DieDefinition);
             //TODO - add behaviors           
             return upgrade;
         }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Practices.Unity;
+using SwdSim.Domain.Constructs;
 using SwdSim.Domain.Repositories;
 using System;
 using System.Collections.Generic;
@@ -21,20 +22,27 @@ namespace SwDestinyDb.Sandbox
             var repo = container.Resolve<IDeckRepository>();
             var deck = repo.GetDestinyDeck(deckListId);
 
-            
-            //var api = new SwDestinyDb.Api.PublicApi();
-            //var sets = api.GetSets();
-            //foreach (var set in sets)
-            //{
-            //    Console.WriteLine(set.name);                
-            //    var cards = api.GetCards(set);
-            //    foreach (var card in cards)
-            //    {
-            //        Console.WriteLine($"\t{card.position} - {card.name}");
-            //    }
-            //}
-            //var decklist = api.GetDeckList("9311");
-            //Console.ReadKey();
+            WriteDeckToConsole(deck);
+           
+            Console.ReadKey();
+        }
+
+        static void WriteDeckToConsole(DestinyDeck deck)
+        {
+            Console.WriteLine("Destiny Deck");
+            Console.WriteLine($"Total Points: {deck.TotalPoints}");
+            Console.WriteLine("Characters:");
+            foreach (var character in deck.Team)
+            {
+                Console.WriteLine($"\t{character.Name} - {character.Dice.Count} Dice @ {character.TotalPoints} points.");
+            }
+            Console.WriteLine("Draw Deck:");
+            foreach (var card in deck.DrawDeck)
+            {
+                Console.WriteLine($"\t{card.Name}");
+            }
+            Console.WriteLine("Battlefield:");
+            Console.WriteLine($"\t{deck.Battlefield.Name}");
         }
     }
 }
