@@ -16,13 +16,18 @@ namespace SwdSim.Data.SwDestinyDb
     public class DestinyDeckBuilder : IDestinyDeckBuilder
     {
         private ICardDefinitionConverter _cardDefinitionService;
-        public DestinyDeckBuilder(ICardDefinitionConverter cardDefinitionService)
+        public DestinyDeckBuilder(ICardDefinitionConverter cardDefinitionService, IBattlefieldBuilder battleFieldBuilder, 
+                                IPlayableCardBuilder playableCardBuilder, ICharacterBuilder characterBuilder)
         {
             _cardDefinitionService = cardDefinitionService;
+            _characterBuilder = characterBuilder;
+            _playableCardBuilder = playableCardBuilder;
+            _battleFieldBuilder = battleFieldBuilder;
+
         }
-        private readonly CharacterBuilder _characterBuilder = new CharacterBuilder();
-        private readonly BattlefieldBuilder _battleFieldBuilder = new BattlefieldBuilder();
-        private readonly PlayableCardBuilder _playableCardBuilder = new PlayableCardBuilder();
+        private readonly ICharacterBuilder _characterBuilder;
+        private readonly IBattlefieldBuilder _battleFieldBuilder;
+        private readonly IPlayableCardBuilder _playableCardBuilder;
       
         public DestinyDeck Build(DeckList deckList, List<Card> destinyCards)
         {

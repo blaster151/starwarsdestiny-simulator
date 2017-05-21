@@ -10,7 +10,7 @@ using SwdSim.Domain;
 
 namespace SwdSim.Data.SwDestinyDb.Builders
 {
-    public class PlayableCardBuilder
+    public class PlayableCardBuilder : IPlayableCardBuilder
     {
         private readonly SupportBuilder _supportBuilder = new SupportBuilder();
         private readonly UpgradeBuilder _upgradeBuilder = new UpgradeBuilder();

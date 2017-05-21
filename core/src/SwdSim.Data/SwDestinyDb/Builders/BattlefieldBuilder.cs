@@ -8,7 +8,7 @@ using Card = SwDestinyDb.Api.Dtos.Card;
 
 namespace SwdSim.Data.SwDestinyDb.Builders
 {
-    public class BattlefieldBuilder
+    public class BattlefieldBuilder : IBattlefieldBuilder
     {
         public Battlefield Build(CardDefinition card)
         {

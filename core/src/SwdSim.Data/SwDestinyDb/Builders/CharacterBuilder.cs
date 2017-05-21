@@ -9,7 +9,7 @@ using SwDestinyDbTypeCode = SwDestinyDb.Api.TypeCode;
 
 namespace SwdSim.Data.SwDestinyDb.Builders
 {
-    public class CharacterBuilder
+    public class CharacterBuilder : ICharacterBuilder
     {
         public Character Build(CardDefinition card, int numberOfDice)
         {
