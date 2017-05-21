@@ -53,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwDestinyDb\BuilderTests\CharacterBuilderTests.cs" />
+    <Compile Include="SwDestinyDb\BuilderTests\PlayableCardBuilderTests.cs" />
+    <Compile Include="SwDestinyDb\BuilderTests\EventCardBuilderTests.cs" />
+    <Compile Include="SwDestinyDb\BuilderTests\SupportBuilderTests.cs" />
+    <Compile Include="SwDestinyDb\BuilderTests\UpgradeBuilderTests.cs" />
+    <Compile Include="SwDestinyDb\BuilderTests\BattlefieldBuilderTests.cs" />
     <Compile Include="SwDestinyDb\ConverterTests\DieConverterTests.cs" />
     <Compile Include="SwDestinyDb\ConverterTests\DieFaceConverterTests.cs" />
     <Compile Include="SwDestinyDb\ConverterTests\SymbolConverterTests.cs" />

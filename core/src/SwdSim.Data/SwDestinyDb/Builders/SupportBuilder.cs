@@ -13,7 +13,7 @@ namespace SwdSim.Data.SwDestinyDb.Builders
         public Support Build(CardDefinition card)
         {
             if (card.CardType != Domain.CardType.Support) throw new Exception("Card is not a support.");
-            var support = new Support(card.Faction, card.Affiliation, card.Cost.Value, card.DieDefinition.ToArray());
+            var support = new Support(card.Faction, card.Affiliation, card.Cost.Value, card.SubType, card.DieDefinition);
             //TODO - add behaviors           
             return support;
         }

@@ -9,10 +9,12 @@ namespace SwdSim.Domain.Constructs.Cards
     public class Upgrade : PlayableCard
     {
         public readonly SubType? SubType;
+        public readonly List<Die.Face> DieDefinition;
 
-        public Upgrade(Faction faction, Affiliation affiliation, int resourceCost, SubType? subType, Die.Face[] dieDefinition) : base(faction, affiliation, resourceCost)
+        public Upgrade(Faction faction, Affiliation affiliation, int resourceCost, SubType? subType, List<Die.Face>  dieDefinition) : base(faction, affiliation, resourceCost)
         {
             SubType = subType;
+            DieDefinition = dieDefinition;
         }
     }
 }

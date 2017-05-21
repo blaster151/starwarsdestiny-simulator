@@ -8,10 +8,12 @@ namespace SwdSim.Domain.Constructs.Cards
 {
     public class Support : PlayableCard
     {
-        public readonly Die.Face[] DieDefinition;
+        public readonly SubType? SubType;
+        public readonly List<Die.Face> DieDefinition;
 
-        public Support(Faction faction, Affiliation affiliation, int resourceCost, Die.Face[] dieDefinition) : base(faction, affiliation, resourceCost)
+        public Support(Faction faction, Affiliation affiliation, int resourceCost, SubType? subType, List<Die.Face> dieDefinition) : base(faction, affiliation, resourceCost)
         {
+            SubType = subType;
             DieDefinition = dieDefinition;
         }
     }
