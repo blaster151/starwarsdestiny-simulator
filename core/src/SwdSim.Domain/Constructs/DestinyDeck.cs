@@ -13,6 +13,8 @@ namespace SwdSim.Domain.Constructs
         public readonly List<Character> Team;
         public readonly Battlefield Battlefield;
 
+        public int TotalPoints => Team.Sum(c => c.TotalPoints);
+
         public DestinyDeck(IEnumerable<Character> team, IEnumerable<PlayableCard> drawDeck, Battlefield battlefield)
         {
             DrawDeck = drawDeck.ToList();

@@ -25,7 +25,8 @@ namespace SwdSim.Domain
         RangedDamage,
         Resource,
         Shield,
-        Special
+        Special,
+        Wildcard
     }
 
     public enum Modifier

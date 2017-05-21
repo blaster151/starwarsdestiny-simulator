@@ -56,11 +56,7 @@ namespace SwdSim.Domain.Constructs
                 {
                     if (value != 0) throw new InvalidDieFaceException("Special faces must have a value of 0.");
                     if (modifier.HasValue) throw new InvalidDieFaceException("Special faces cannot have modifiers.");
-                }
-                else if (symbol.HasValue)
-                {
-                    if (value == 0) throw new InvalidDieFaceException($"{symbol} cannot have a value of 0.");                   
-                }
+                }              
             }
         }
     }

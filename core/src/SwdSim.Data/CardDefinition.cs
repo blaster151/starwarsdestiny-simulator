@@ -15,7 +15,7 @@ namespace SwdSim.Data
         public CardType CardType { get; set; }
         public Affiliation Affiliation { get; set; }
         public Faction Faction { get; set; }
-        public SubType SubType { get;set;}
+        public SubType? SubType { get;set;}
         public List<Die.Face> DieDefinition { get; set; }
         public int? Cost { get; set; }
         public int? Health { get; set; }

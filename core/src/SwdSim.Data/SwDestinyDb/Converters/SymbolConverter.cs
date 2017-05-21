@@ -21,6 +21,8 @@ namespace SwdSim.Data.SwDestinyDb.Converters
                 case "Dc": return Symbol.Discard;
                 case "Dr": return Symbol.Disrupt;
                 case "F": return Symbol.Focus;
+                case "R": return Symbol.Resource;
+                case "X": return Symbol.Wildcard;
                 default: throw new NotImplementedException();
             }
         }

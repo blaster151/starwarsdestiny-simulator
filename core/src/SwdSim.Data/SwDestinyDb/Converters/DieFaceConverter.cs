@@ -6,7 +6,7 @@ namespace SwdSim.Data.SwDestinyDb.Converters
 {
     internal class DieFaceConverter
     {
-        private static Regex _faceRegex = new Regex(@"^(?<modifier>\+?)(?<value>\d{0,3})(?<symbol>-|Sp|Sh|MD|RD|Dc|Dr|F)(?<resourceCost>\d{0,3})$");
+        private static Regex _faceRegex = new Regex(@"^(?<modifier>\+?)(?<value>\d{0,3})(?<symbol>-|Sp|Sh|MD|RD|Dc|Dr|F|R|X)(?<resourceCost>\d{0,3})$");
         private static SymbolConverter _symbolConverter = new SymbolConverter();
         private static ModifierConverter _modifierConverter = new ModifierConverter();
 

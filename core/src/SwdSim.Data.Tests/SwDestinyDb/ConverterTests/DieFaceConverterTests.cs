@@ -19,6 +19,8 @@ namespace SwdSim.Data.Tests.SwDestinyDb.ConverterTests
         [TestCase("+10Dc12", Modifier.Plus, 10, Symbol.Discard, 12)]
         [TestCase("-", null, 0, Symbol.Blank, 0)]
         [TestCase("Sp", null, 0, Symbol.Special, 0)]
+        [TestCase("1R", null, 1, Symbol.Resource, 0)]
+        [TestCase("+1X", Modifier.Plus, 1, Symbol.Wildcard, 0)]
         public void DieFaceConverter_Convert_ExpectedValue(string face_string, Modifier? expectedModifier, int expectedValue, Symbol expectedSymbol, int expectedResourceCost)
         {
             var face = _converter.Convert(face_string);

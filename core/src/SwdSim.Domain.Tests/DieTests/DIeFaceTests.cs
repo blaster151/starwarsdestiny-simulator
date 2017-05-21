@@ -31,19 +31,7 @@ namespace SwdSim.Domain.Tests.DieTests
                 }                
             }
         }
-
-        [Test]
-        public void DieFace_Construct_ValueDice_Invalid_ThrowsException()
-        {
-            foreach (var symbol in ValueSymbols)
-            {               
-                Assert.Throws<InvalidDieFaceException>(() =>
-                {
-                    var face = new Die.Face(symbol, 0, null, 0);
-                });                
-            }
-        }
-
+      
         [Test]
         public void DieFace_Construct_ZeroValueDice_Valid_Succeeds()
         {

@@ -16,7 +16,8 @@ namespace SwdSim.Data.Tests.SwDestinyDb.ConverterTests
         [TestCase("weapon", SubType.Weapon)]
         [TestCase("equipment", SubType.Equipment)]
         [TestCase("droid", SubType.Droid)]
-        public void SubTypeConverter_Convert_ExpectedValue(string subtype_code, SubType expected)
+        [TestCase(null, null)]
+        public void SubTypeConverter_Convert_ExpectedValue(string subtype_code, SubType? expected)
         {
             Assert.AreEqual(expected, _converter.Convert(subtype_code));
         }

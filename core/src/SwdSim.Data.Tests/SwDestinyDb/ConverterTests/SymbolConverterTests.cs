@@ -18,6 +18,8 @@ namespace SwdSim.Data.Tests.SwDestinyDb.ConverterTests
         [TestCase("Dc", Symbol.Discard)]
         [TestCase("Dr", Symbol.Disrupt)]
         [TestCase("F", Symbol.Focus)]
+        [TestCase("R", Symbol.Resource)]
+        [TestCase("X", Symbol.Wildcard)]
         public void SymbolConverter_Convert_ExpectedValue(string symbol, Symbol expected)
         {
             Assert.AreEqual(expected, _converter.Convert(symbol));

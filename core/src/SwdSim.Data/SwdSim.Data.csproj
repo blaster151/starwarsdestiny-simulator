@@ -83,6 +83,7 @@
     <Compile Include="SwDestinyDb\DeckRepository.cs" />
     <Compile Include="SwDestinyDb\Exceptions\DeckListNotFoundException.cs" />
     <Compile Include="SwDestinyDb\ICardDefinitionConverter.cs" />
+    <Compile Include="UnityIocModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SwDestinyDb.Api\SwDestinyDb.Api.csproj">

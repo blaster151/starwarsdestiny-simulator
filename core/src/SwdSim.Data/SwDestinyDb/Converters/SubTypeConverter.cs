@@ -10,7 +10,7 @@ namespace SwdSim.Data.SwDestinyDb.Converters
 {
     internal class SubTypeConverter
     {
-        internal SubType Convert(string subtype_code)
+        internal SubType? Convert(string subtype_code)
         {
             switch (subtype_code)
             {
@@ -19,6 +19,7 @@ namespace SwdSim.Data.SwDestinyDb.Converters
                 case "weapon": return SubType.Weapon;
                 case "equipment": return SubType.Equipment;
                 case "droid": return SubType.Droid;
+                case null: return null;
                 default: throw new NotImplementedException();
             }
         }

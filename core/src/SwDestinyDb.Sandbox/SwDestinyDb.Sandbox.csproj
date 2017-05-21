@@ -71,6 +71,14 @@
       <Project>{b8910000-11f7-4551-b508-ba2625f7d3d5}</Project>
       <Name>SwDestinyDb.Api</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SwdSim.Data\SwdSim.Data.csproj">
+      <Project>{7f8733a2-c2df-437e-993d-12ae29dca08e}</Project>
+      <Name>SwdSim.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SwdSim.Domain\SwdSim.Domain.csproj">
+      <Project>{33749ca1-8702-468b-af2a-07c749289bae}</Project>
+      <Name>SwdSim.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
